@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.10.0' // Ensure you have the latest version
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.testng:testng:7.7.0' // or the version you need
+    testImplementation 'io.qameta.allure:allure-testng:2.20.1' // Allure TestNG dependency
+    testImplementation 'com.microsoft.playwright:playwright:1.37.0'// Playwright dependency
+}
+
+allure {
+    version = '2.20.1' // or the version you need
+   // aspectjweaving = true
+}
+
+test {
+    useTestNG(){
+        suites 'sresources/master.xml'
+    }
+}
