@@ -11,8 +11,11 @@ public class PropTesta extends PropBase{
 
             page.navigate("https://www.saucedemo.com/");
 
-            page.fill(locprop.getProperty("user_name"), "Masoma");
-            page.fill(locprop.getProperty("user_pass"), "12345");
+            page.fill(locprop.getProperty("user_name"), "standard_user");
+            page.fill(locprop.getProperty("user_pass"), "secret_sauce");
+            page.click(locprop.getProperty("signin_button"));
+
+
 
             page.waitForTimeout(5000);
             browser.close();
