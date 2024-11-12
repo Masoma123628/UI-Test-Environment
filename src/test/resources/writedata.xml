@@ -1,0 +1,11 @@
+<suite name="WriteTestXML" guice-stage="DEVELOPMENT">
+    <test name="Test1">
+        <classes>
+            <class name="TestWrite">
+                <methods>
+                    <include name="testWrite"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

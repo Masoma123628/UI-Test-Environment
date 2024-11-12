@@ -11,6 +11,28 @@ dependencies {
     testImplementation 'org.testng:testng:7.7.0' // or the version you need
     testImplementation 'io.qameta.allure:allure-testng:2.20.1' // Allure TestNG dependency
     testImplementation 'com.microsoft.playwright:playwright:1.37.0'// Playwright dependency
+
+    // JAXB API
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    // JAXB Implementation
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+
+    // Apache POI for handling Excel files (Read and Write in Excel)
+    implementation 'org.apache.poi:poi:5.2.3'         // Core POI library
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'   // For .xlsx files
+
+    // To read & write JSON Data
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    //For write in Excel file
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0' // Use the latest version
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0' // Use the latest version
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.26.0' //For Selenium locator and others
+
+    //for parsing JSON
+    implementation 'org.json:json:20210307'
+
 }
 
 allure {
@@ -20,6 +42,8 @@ allure {
 
 test {
     useTestNG(){
-        suites 'sresources/master.xml'
+        suites 'sresources/master.xml'// To run multiple .xml file from 1 xml file
     }
+
+
 }

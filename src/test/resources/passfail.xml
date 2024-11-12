@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="PropTestXML" guice-stage="DEVELOPMENT">
+    <test name="Test1">
+        <classes>
+            <class name="PassFailTest">
+                <methods>
+                    <include name="checkStatus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
